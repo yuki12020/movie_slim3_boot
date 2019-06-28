@@ -44,11 +44,32 @@ return function (App $app) {
 	  $response = $this->renderer->render($response, "book_api.phtml", ["data" => $mapper]);
 	});
 	
+	//出来てる｛
+	$app->get('/book_api_sample', function ($request, $response, $args) {
+	  $mapper = new TestMapper($this->db);
+	  $test = $mapper->getTests();
+	  $response = $this->renderer->render($response, "book_api_sample.phtml", ["data" => $mapper]);
+	});
+	
+	//出来てる detail 画面
+	$app->map(['GET', 'POST'], '/book_api_sample_detail', function ($request, $response, $args) {
+	  //TestMapper_detail.phpのClassのインスタンス作成
+	  $mapper = new TestMapper_detail($this->db);
+	  $response = $this->renderer->render($response, "book_api_sample_detail.phtml", ["data" => $mapper]);
+	});
+	//｝
+	
+	//test
+	$app->map(['GET', 'POST'], '/detail_temp', function ($request, $response, $args) {
+	  $mapper = new TestMapper($this->db);
+	  $test = $mapper->getTests();
+	  $response = $this->renderer->render($response, "detail_tmp.phtml", ["data" => $mapper]);
+	});
 	
 };
 
 
-   //下の、出来てない。
+//下の、出来てない。
 //ポイントの購入、出金履歴
 $app->map(['GET', 'POST'], '/point/', function (Request $request, Response $response, array $args) {
     //$this->logger->info("Slim-Skeleton '/' route");

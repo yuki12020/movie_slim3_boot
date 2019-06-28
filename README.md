@@ -1,1 +1,1 @@
-# slim3サンプル
+# boot_slim3
