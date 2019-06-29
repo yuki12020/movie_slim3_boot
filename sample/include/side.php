@@ -6,23 +6,23 @@
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                      <?php echo"試験";?>
+                      <?php echo"融合テスト";?>
                     </a>
                 </div>
                 
 				<ul class="nav">
                     
 					<li class="nav-item active">
-                        <a class="nav-link" href="temp.php">
+                        <a class="nav-link" href="/slim3/sample/public/book_api_sample">
                             <i class="nc-icon nc-icon nc-paper-2"></i>
-                            <p><?php var_dump(temp.php);?></p>
+                            <p><?php echo "movie_info db のtestテーブルから取得";?></p>
                         </a>
                     </li>
 					
                     <li>
-                        <a class="nav-link" href="./temp2.php">
+                        <a class="nav-link" href="/slim3/sample/public/movie_info">
                             <i class="nc-icon nc-bell-55"></i>
-                            <p>temp2.php</p>
+                            <p>movie_info表示</p>
                         </a>
                     </li>
 					

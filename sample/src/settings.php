@@ -22,7 +22,7 @@ return [
 			  'port' => '3306',
 			  'user' => 'test123',
 			  'pass' => 'password',
-			  'dbname' => 'test',
+			  'dbname' => 'movie_info',
 		  ],
 		
 		
